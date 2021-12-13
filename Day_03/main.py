@@ -41,8 +41,32 @@ def main_01():
 
 
 def main_02():
-    pass
+    # read input data from input.txt
+    with open('input_demo.txt', 'r') as f:
+        data = f.read().splitlines()
+
+    # all strings have the same length, get the length of the first string
+    length = len(data[0])
+
+    # copy the list to new list to be able to modify it without changing the original list
+    oxygenGeneratorRating = data[:]
+    co2ScrubberRating = data[:]
+
+    sum0 = 0
+    sum1 = 0
+
+    # loop over all strings
+    for j in range(length):
+        for i in range(len(data)):
+            if data[i][j] == "1":
+                sum1 += 1
+            elif data[i][j] == "0":
+                sum0 += 1
+
+        # TODO: Check all values for the first digit and copy the value to another list
+        sum0 = 0
+        sum1 = 0
 
 
 if __name__ == "__main__":
-    main_01()
+    main_02()
