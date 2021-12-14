@@ -99,7 +99,6 @@ def main_02():
         else:
             break
 
-
     for column in range(length):
         if len(co2ScrubberRating) > 1:
             for row in range(len(co2ScrubberRating)):
