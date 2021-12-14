@@ -57,7 +57,7 @@ def main_02():
     toDeleteOxygen = []
     toDeleteCo2 = []
 
-    # loop over all strings
+    # loop over all strings for the oxygen generator
     for column in range(length):
         if len(oxygenGeneratorRating) > 1:
             for row in range(len(oxygenGeneratorRating)):
@@ -66,6 +66,7 @@ def main_02():
                 else:
                     sum0 += 1
 
+            # add the indexes to delete to the list
             print(f"sum1: {sum1}, sum0: {sum0}")
             if sum1 > sum0:
                 for row in range(len(oxygenGeneratorRating)):
@@ -88,8 +89,10 @@ def main_02():
                     else:
                         continue
 
+            # reverse the list to not get index errors
             toDeleteOxygen.reverse()
 
+            # delete the indexes from the list
             for i in toDeleteOxygen:
                 del oxygenGeneratorRating[i]
 
@@ -99,6 +102,7 @@ def main_02():
         else:
             break
 
+    # loop over all strings for the co2 scrubber, same as above
     for column in range(length):
         if len(co2ScrubberRating) > 1:
             for row in range(len(co2ScrubberRating)):
@@ -121,6 +125,7 @@ def main_02():
                         toDeleteCo2.append(row)
                     else:
                         continue
+
             elif sum1 == sum0:
                 for row in range(len(co2ScrubberRating)):
                     if co2ScrubberRating[row][column] == "1":
