@@ -34,10 +34,10 @@ def main_01():
         sum0 = 0
         sum1 = 0
 
-    print("Gamma rate:", gammaRate, "in decimal:", int(gammaRate, 2))
-    print("Epsilon rate:", epsilonRate, "in decimal:", int(epsilonRate, 2))
+    # print("Gamma rate:", gammaRate, "in decimal:", int(gammaRate, 2))
+    # print("Epsilon rate:", epsilonRate, "in decimal:", int(epsilonRate, 2))
 
-    print("final solution:", int(gammaRate, 2) * int(epsilonRate, 2))
+    print("Final solution - Part 1:", int(gammaRate, 2) * int(epsilonRate, 2))
 
 
 def main_02():
@@ -67,7 +67,6 @@ def main_02():
                     sum0 += 1
 
             # add the indexes to delete to the list
-            print(f"sum1: {sum1}, sum0: {sum0}")
             if sum1 > sum0:
                 for row in range(len(oxygenGeneratorRating)):
                     if oxygenGeneratorRating[row][column] == "0":
@@ -111,7 +110,6 @@ def main_02():
                 else:
                     sum0 += 1
 
-            print(f"sum1: {sum1}, sum0: {sum0}")
             if sum1 < sum0:
                 for row in range(len(co2ScrubberRating)):
                     if co2ScrubberRating[row][column] == "0":
@@ -144,10 +142,10 @@ def main_02():
         else:
             break
 
-    print("Oxygen generator rating:", oxygenGeneratorRating)
-    print("CO2 scrubber rating:", co2ScrubberRating)
-    print("final solution:", int(oxygenGeneratorRating[0], 2) * int(co2ScrubberRating[0], 2))
+    # print the result
+    print("Final solution - Part 2:", int(oxygenGeneratorRating[0], 2) * int(co2ScrubberRating[0], 2))
 
 
 if __name__ == "__main__":
+    main_01()
     main_02()
