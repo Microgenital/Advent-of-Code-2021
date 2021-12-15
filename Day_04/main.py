@@ -15,6 +15,7 @@ def main_01():
     data = [x.split() for x in data]
     bingoBoards = data[:]
 
+    # delete empty lines
     delete = []
     for i in range(len(bingoBoards)):
         if len(bingoBoards[i]) != 5:
