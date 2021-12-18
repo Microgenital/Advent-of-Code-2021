@@ -8,3 +8,10 @@
  Just run main_01() for the first part or main_02() for the second part to solve the problem.
 
  To get your input running just paste your raw input into "input.txt"
+ 
+---
+
+Ok, got to the point where i dont have a lot of time for this :(
+
+Hopefully i will have more time in the future, looking forward to solving them in the
+beginning of next year.
